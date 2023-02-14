@@ -26,18 +26,18 @@ body {
 /* ========================== > Attribution  */
 
 .attribution {
-    color: hsl(0, 0%, 28%);
+    color: var(--cool-gray);
     font-size: 11px;
     text-align: center;
     position: fixed;
-    bottom: 80px;
+    bottom: 10%;
     left: 0;
     width: 100vw;
     display: none;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--accent);
 }
 
 /* ===================================== */
@@ -705,6 +705,10 @@ input[name="plan"]:checked + label .plans,
         width: 65px;
         height: 65px;
         margin-bottom: 1.5em;
+    }
+
+    .attribution {
+        display: block;
     }
 
 }
