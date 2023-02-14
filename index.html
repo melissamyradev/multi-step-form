@@ -1,341 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
 
-  <script src="script.js" defer></script>
-  
-  <title>Frontend Mentor | Multi-step form</title>
-
-  <style>
+    <script src="script.js" defer></script>
     
-  </style>
-</head>
-<body id="body">
+    <title>Frontend Mentor | Multi-step form</title>
 
-  <div id="body_wrapper">
+    <style>
+      
+    </style>
+  </head>
+  <body id="body">
 
-    <input class="numbering_radio" type="radio" name="page_indicators" id="page_1_radio">
-    <input class="numbering_radio" type="radio" name="page_indicators" id="page_2_radio">
-    <input class="numbering_radio" type="radio" name="page_indicators" id="page_3_radio">
-    <input class="numbering_radio" type="radio" name="page_indicators" id="page_4_radio">
-    <!-- Sidebar start -->
-    <div class="steps flex center-items">
-      <ul>
-        <li class="numbering">
-          <label for="page_1_radio">
-            <span class="steps_num_container">
-              <span class="steps_num" id="page_1">1</span>
+    <div id="body_wrapper">
+
+      <input class="numbering_radio" type="radio" name="page_indicators" id="page_1_radio">
+      <input class="numbering_radio" type="radio" name="page_indicators" id="page_2_radio">
+      <input class="numbering_radio" type="radio" name="page_indicators" id="page_3_radio">
+      <input class="numbering_radio" type="radio" name="page_indicators" id="page_4_radio">
+      <!-- Sidebar start -->
+      <div class="steps flex center-items">
+        <ul>
+          <li class="numbering">
+            <label for="page_1_radio">
+              <span class="steps_num_container">
+                <span class="steps_num" id="page_1">1</span>
+              </span>
+              <span class="steps_desc">
+                <span class="steps_num_ind">Step 1</span><br />
+                <span class="steps_title">Your Info</span>
+              </span>
+            </label>
+          </li>
+          <li class="numbering">
+            <label for="page_2_radio">
+              <span class="steps_num_container">
+                <span class="steps_num" id="page_2">2</span>
+              </span>
+              <span class="steps_desc">
+                <span class="steps_num_ind">Step 2</span><br />
+                <span class="steps_title">Select plan</span>
+              </span>
+            </label>
+          </li>
+          <li class="numbering">
+            <label for="page_3_radio">
+              <span class="steps_num_container">
+                <span class="steps_num" id="page_3">3</span>
+              </span>
+              <span class="steps_desc">
+                <span class="steps_num_ind">Step 3</span><br />
+                <span class="steps_title">Add-ons</span>
+              </span>
+            </label>
+          </li>
+          <li class="numbering">
+            <label for="page_4_radio">
+              <span class="steps_num_container">
+                <span class="steps_num" id="page_4">4</span>
+              </span>
+              <span class="steps_desc">
+                <span class="steps_num_ind">Step 4</span><br />
+                <span class="steps_title">Summary</span>
+              </span>
+            </label>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Sidebar end -->
+      
+      <main id="main">
+      
+        <!-- Step 1 start -->
+      
+        <div class="pages">
+          <h2>
+            Personal info
+          </h2>
+          <p>
+            Please provide your name, email address, and phone number.
+          </p>
+          <form id="form">
+            <!-- Name -->
+            <label class="contact_form_label" for="contact_name">Name
+              <input class="contact_form_input block" name="name" id="contact_name" type="text" placeholder="e.g. Stephen King"
+                required>
+            </label>
+            <!-- Email -->
+            <label class="contact_form_label" for="contact_email">Email Address
+              <input class="contact_form_input block" name="email" id="contact_email" type="text" placeholder="e.g. stephenking@lorem.com" required>
+            </label>
+            <!-- Phone -->
+            <label class="contact_form_label" for="contact_phone_num">Phone Number
+              <input class="contact_form_input block" name="name" id="contact_phone_num" type="text" placeholder="e.g. +1 234 567 890" required>
+            </label>
+          </form>
+        </div>
+      
+      
+      
+      
+        <!-- Step 1 end -->
+      
+        <!-- Step 2 start -->
+        <div class="pages">
+          <h2>Select your plan</h2>
+          <p>You have the option of monthly or yearly billing.</p>
+      
+          <input type="radio" id="toggle_yearly_radio" name="plan_duration" value="Yearly">
+      
+          <div class="plans_container">
+            <!-- checkbox to toggle if yearly is chosen -->
+            <!-- <input type="checkbox" id="plans_toggle_check"> -->
+      
+              <!-- Arcade -->
+      
+              <!-- radio option to toggle plan chosen -->
+              <input class="plans_radio" type="radio" id="plans_arcade" name="plan" value="Arcade">
+              <label for="plans_arcade">
+                <div class="plans">
+                  <svg>
+                    <use xlink:href="assets/images/icon-arcade.svg#icon-arcade" />
+                  </svg>
+                  <div>
+                    <span class="block plans_label">Arcade</span>
+                    <span class="block plans_monthly">$9/mo</span>
+                    <span class="block plans_yearly">$90/yr</span>
+                    <span class="block plans_yearly plans_yearly_promo">2 months free</span>
+                  </div>
+                </div>
+              </label>
+      
+              <!-- Advanced -->
+      
+              <!-- radio option to toggle plan chosen -->
+              <input class="plans_radio" type="radio" id="plans_advanced" name="plan" value="Advanced">
+              <label for="plans_advanced">
+                <div class="plans">
+                  <svg>
+                    <use xlink:href="assets/images/icon-advanced.svg#icon-advanced" />
+                  </svg>
+                  <div>
+                    <span class="block plans_label">Advanced</span>
+                    <span class="block plans_monthly">$12/mo</span>
+                    <span class="block plans_yearly">$120/yr</span>
+                    <span class="block plans_yearly plans_yearly_promo">2 months free</span>
+                  </div>
+                </div>
+              </label>
+      
+              <!-- Pro -->
+      
+              <!-- radio option to toggle plan chosen -->
+              <input class="plans_radio" type="radio" id="plans_pro" name="plan" value="Pro">
+              <label for="plans_pro">
+                <div class="plans">
+                  <svg>
+                    <use xlink:href="assets/images/icon-pro.svg#icon-pro" />
+                  </svg>
+                  <div>
+                    <span class="block plans_label">Pro</span>
+                    <span class="block plans_monthly">$15/mo</span>
+                    <span class="block plans_yearly">$150/yr</span>
+                    <span class="block plans_yearly plans_yearly_promo">2 months free</span>
+                  </div>
+                </div>
+              </label>    
+      
+          </div>
+      
+          <div id="plans_toggle">
+      
+            <input type="radio" id="toggle_monthly_radio" name="plan_duration" value="Monthly">
+            <label for="toggle_monthly_radio" class="toggle_options chosen" id="toggle_monthly">Monthly</label>
+      
+            <span id="toggle_base">
+              <span id="toggle_button"></span>
             </span>
-            <span class="steps_desc">
-              <span class="steps_num_ind">Step 1</span><br />
-              <span class="steps_title">Your Info</span>
-            </span>
-          </label>
-        </li>
-        <li class="numbering">
-          <label for="page_2_radio">
-            <span class="steps_num_container">
-              <span class="steps_num" id="page_2">2</span>
-            </span>
-            <span class="steps_desc">
-              <span class="steps_num_ind">Step 2</span><br />
-              <span class="steps_title">Select plan</span>
-            </span>
-          </label>
-        </li>
-        <li class="numbering">
-          <label for="page_3_radio">
-            <span class="steps_num_container">
-              <span class="steps_num" id="page_3">3</span>
-            </span>
-            <span class="steps_desc">
-              <span class="steps_num_ind">Step 3</span><br />
-              <span class="steps_title">Add-ons</span>
-            </span>
-          </label>
-        </li>
-        <li class="numbering">
-          <label for="page_4_radio">
-            <span class="steps_num_container">
-              <span class="steps_num" id="page_4">4</span>
-            </span>
-            <span class="steps_desc">
-              <span class="steps_num_ind">Step 4</span><br />
-              <span class="steps_title">Summary</span>
-            </span>
-          </label>
-        </li>
-      </ul>
+      
+            <label class="toggle_options" for="toggle_yearly_radio" id="toggle_yearly">Yearly</label>
+          </div>
+        </div>
+      
+        <!-- Step 2 end -->
+      
+        <!-- Step 3 start -->
+      
+        <div class="pages">
+          <h2>Pick add-ons</h2>
+          <p>Add-ons help enhance your gaming experience.</p>
+      
+          <div class="addons_container">
+      
+            <!-- checkbox to toggle if addon item is chosen -->
+            <input class="addons_checkbox" type="checkbox" name="online_service" id="addons_online_service"
+              value="Online Service">
+      
+            <div class="addons">
+              <label for="addons_online_service" class="block">
+                <span class="block addons_pseudo_checkbox">
+                  <svg>
+                    <use xlink:href="assets/images/icon-checkmark.svg#icon-checkmark" />
+                  </svg>
+                </span>
+                <div>
+                  <span class="addons_options">Online Service</span>
+                  <span class="block addons_desc">Access to multiplayer games</span>
+                </div>
+              </label>
+              <span class="block addons_pricing">+$1/mo</span>
+            </div>
+      
+            <!-- checkbox to toggle if addon item is chosen -->
+            <input class="addons_checkbox" type="checkbox" name="larger_storage" id="addons_larger_storage"
+              value="Larger Storage">
+      
+            <div class="addons">
+              <label for="addons_larger_storage" class="block">
+                <span class="block addons_pseudo_checkbox">
+                  <svg>
+                    <use xlink:href="assets/images/icon-checkmark.svg#icon-checkmark" />
+                  </svg>
+                </span>
+                <div>
+                  <span class="addons_options">Larger Storage</span>
+                  <span class="block  addons_desc">Extra 1TB of cloud save</span>
+                </div>
+              </label>
+              <span class="block addons_pricing">+$2/mo</span>
+            </div>
+      
+            <!-- checkbox to toggle if addon item is chosen -->
+            <input class="addons_checkbox" type="checkbox" name="custom_profile" id="addons_custom_profile"
+              value="Customizable Profile">
+      
+            <div class="addons">
+              <label for="addons_custom_profile" class="block">
+                <span class="block addons_pseudo_checkbox">
+                  <svg>
+                    <use xlink:href="assets/images/icon-checkmark.svg#icon-checkmark" />
+                  </svg>
+                </span>
+                <div>
+                  <span class="addons_options">Customizable Profile</span>
+                  <span class="block  addons_desc">Custom theme on your profile</span>
+                </div>
+              </label>
+              <span class="block addons_pricing">+$2/mo</span>
+            </div>
+          </div>
+      
+        </div>
+      
+        <!-- Step 3 end -->
+      
+        <!-- Step 4 start -->
+      
+        <div class="pages">
+      
+          <h2>Finishing up</h2>
+          <p>Double-check everything looks OK before confirming.</p>
+      
+          <div class="summary_container summary_main">
+      
+            <!-- Dynamically add subscription and add-on selections here -->
+      
+            <div id="summary_plan">
+              <span>
+                <span id="summary_plan_title" class="block">Arcade</span> (<span id="summary_plan_duration">Monthly</span>)
+              </span>
+              <div class="summary_addons_item_container">
+                <span id="summary_button_change">Change</span>
+                <span id="summary_plan_pricing" class="block">$<span id="summary_plan_total">9</span>/<span
+                    class="summary_plan_dur">mo</span></span>
+              </div>
+            </div>
+      
+            <div id="summary_addons">
+              <div class="summary_addons_item_container">
+                <span class="summary_addons_item">Online Service</span>
+                <span class="summary_addons_item_pricing">+$<span class="summary_addons_amount">1</span>/<span
+                    class="summary_plan_dur">mo</span></span>
+              </div>
+              <div class="summary_addons_item_container">
+                <span class="summary_addons_item">Larger Storage</span>
+                <span class="summary_addons_item_pricing">+$<span class="summary_addons_amount">2</span>/<span
+                    class="summary_plan_dur">mo</span></span>
+              </div>
+            </div>
+      
+          </div>
+          <div id="summary_total" class="summary_container">
+            <span class="summary_total_desc">Total (per <span id="summary_total_duration">month</span>)</span>
+            <span class="block" id="summary_total_pricing">+$<span id="summary_total_amount">12</span>/<span
+                class="summary_plan_dur">mo</span></span>
+          </div>
+      
+        </div>
+      
+      
+        <!-- Step 4 end -->
+      
+        <!-- Step 5 start -->
+      
+        <div class="pages" id="page_thankyou">
+          <svg>
+            <use xlink:href="assets/images/icon-thank-you.svg#icon-thank-you" />
+          </svg>
+          <h2>Thank you!</h2>
+          <p>Thanks for confirming your subscription! <br />We hope you have fun
+            using our platform. If you ever need support, please feel free
+            to email us at support@loremgaming.com.</p>
+        </div>
+        <!-- Step 5 end -->
+      
+        <div id="buttons_container">
+          <button class="buttons" id="button_back">Go Back</button>
+          <button class="buttons" id="button_next">Next Step</button>
+        </div>
+      </main>
+      
+      
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://melissamyra.space" target="_blank">Melissa Myra</a>.
+      </div>
+
     </div>
     
-    <!-- Sidebar end -->
-    
-    <main id="main">
-    
-      <!-- Step 1 start -->
-    
-      <div class="pages">
-        <h2>
-          Personal info
-        </h2>
-        <p>
-          Please provide your name, email address, and phone number.
-        </p>
-        <form action="" method="POST" id="form">
-          <!-- Name -->
-          <label class="contact_form_label" for="contact_name">Name
-            <input class="contact_form_input block" name="name" id="contact_name" type="text" placeholder="e.g. Stephen King"
-              required>
-          </label>
-          <!-- Email -->
-          <label class="contact_form_label" for="contact_email">Email Address
-            <input class="contact_form_input block" name="email" id="contact_email" type="text" placeholder="e.g. stephenking@lorem.com" required>
-          </label>
-          <!-- Phone -->
-          <label class="contact_form_label" for="contact_phone_num">Phone Number
-            <input class="contact_form_input block" name="name" id="contact_phone_num" type="text" placeholder="e.g. +1 234 567 890" required>
-          </label>
-        </form>
-      </div>
-    
-    
-    
-    
-      <!-- Step 1 end -->
-    
-      <!-- Step 2 start -->
-      <div class="pages">
-        <h2>Select your plan</h2>
-        <p>You have the option of monthly or yearly billing.</p>
-    
-        <input type="radio" id="toggle_yearly_radio" name="plan_duration" value="Yearly">
-    
-        <div class="plans_container">
-          <!-- checkbox to toggle if yearly is chosen -->
-          <!-- <input type="checkbox" id="plans_toggle_check"> -->
-    
-            <!-- Arcade -->
-    
-            <!-- radio option to toggle plan chosen -->
-            <input class="plans_radio" type="radio" id="plans_arcade" name="plan" value="Arcade">
-            <label for="plans_arcade">
-              <div class="plans">
-                <svg>
-                  <use xlink:href="assets/images/icon-arcade.svg#icon-arcade" />
-                </svg>
-                <div>
-                  <span class="block plans_label">Arcade</span>
-                  <span class="block plans_monthly">$9/mo</span>
-                  <span class="block plans_yearly">$90/yr</span>
-                  <span class="block plans_yearly plans_yearly_promo">2 months free</span>
-                </div>
-              </div>
-            </label>
-    
-            <!-- Advanced -->
-    
-            <!-- radio option to toggle plan chosen -->
-            <input class="plans_radio" type="radio" id="plans_advanced" name="plan" value="Advanced">
-            <label for="plans_advanced">
-              <div class="plans">
-                <svg>
-                  <use xlink:href="assets/images/icon-advanced.svg#icon-advanced" />
-                </svg>
-                <div>
-                  <span class="block plans_label">Advanced</span>
-                  <span class="block plans_monthly">$12/mo</span>
-                  <span class="block plans_yearly">$120/yr</span>
-                  <span class="block plans_yearly plans_yearly_promo">2 months free</span>
-                </div>
-              </div>
-            </label>
-    
-            <!-- Pro -->
-    
-            <!-- radio option to toggle plan chosen -->
-            <input class="plans_radio" type="radio" id="plans_pro" name="plan" value="Pro">
-            <label for="plans_pro">
-              <div class="plans">
-                <svg>
-                  <use xlink:href="assets/images/icon-pro.svg#icon-pro" />
-                </svg>
-                <div>
-                  <span class="block plans_label">Pro</span>
-                  <span class="block plans_monthly">$15/mo</span>
-                  <span class="block plans_yearly">$150/yr</span>
-                  <span class="block plans_yearly plans_yearly_promo">2 months free</span>
-                </div>
-              </div>
-            </label>    
-    
-        </div>
-    
-        <div id="plans_toggle">
-    
-          <input type="radio" id="toggle_monthly_radio" name="plan_duration" value="Monthly">
-          <label for="toggle_monthly_radio" class="toggle_options chosen" id="toggle_monthly">Monthly</label>
-    
-          <span id="toggle_base">
-            <span id="toggle_button"></span>
-          </span>
-    
-          <label class="toggle_options" for="toggle_yearly_radio" id="toggle_yearly">Yearly</label>
-        </div>
-      </div>
-    
-      <!-- Step 2 end -->
-    
-      <!-- Step 3 start -->
-    
-      <div class="pages">
-        <h2>Pick add-ons</h2>
-        <p>Add-ons help enhance your gaming experience.</p>
-    
-        <div class="addons_container">
-    
-          <!-- checkbox to toggle if addon item is chosen -->
-          <input class="addons_checkbox" type="checkbox" name="online_service" id="addons_online_service"
-            value="Online Service">
-    
-          <div class="addons">
-            <label for="addons_online_service" class="block">
-              <span class="block addons_pseudo_checkbox">
-                <svg>
-                  <use xlink:href="assets/images/icon-checkmark.svg#icon-checkmark" />
-                </svg>
-              </span>
-              <div>
-                <span class="addons_options">Online Service</span>
-                <span class="block addons_desc">Access to multiplayer games</span>
-              </div>
-            </label>
-            <span class="block addons_pricing">+$1/mo</span>
-          </div>
-    
-          <!-- checkbox to toggle if addon item is chosen -->
-          <input class="addons_checkbox" type="checkbox" name="larger_storage" id="addons_larger_storage"
-            value="Larger Storage">
-    
-          <div class="addons">
-            <label for="addons_larger_storage" class="block">
-              <span class="block addons_pseudo_checkbox">
-                <svg>
-                  <use xlink:href="assets/images/icon-checkmark.svg#icon-checkmark" />
-                </svg>
-              </span>
-              <div>
-                <span class="addons_options">Larger Storage</span>
-                <span class="block  addons_desc">Extra 1TB of cloud save</span>
-              </div>
-            </label>
-            <span class="block addons_pricing">+$2/mo</span>
-          </div>
-    
-          <!-- checkbox to toggle if addon item is chosen -->
-          <input class="addons_checkbox" type="checkbox" name="custom_profile" id="addons_custom_profile"
-            value="Customizable Profile">
-    
-          <div class="addons">
-            <label for="addons_custom_profile" class="block">
-              <span class="block addons_pseudo_checkbox">
-                <svg>
-                  <use xlink:href="assets/images/icon-checkmark.svg#icon-checkmark" />
-                </svg>
-              </span>
-              <div>
-                <span class="addons_options">Customizable Profile</span>
-                <span class="block  addons_desc">Custom theme on your profile</span>
-              </div>
-            </label>
-            <span class="block addons_pricing">+$2/mo</span>
-          </div>
-        </div>
-    
-      </div>
-    
-      <!-- Step 3 end -->
-    
-      <!-- Step 4 start -->
-    
-      <div class="pages">
-    
-        <h2>Finishing up</h2>
-        <p>Double-check everything looks OK before confirming.</p>
-    
-        <div class="summary_container summary_main">
-    
-          <!-- Dynamically add subscription and add-on selections here -->
-    
-          <div id="summary_plan">
-            <span>
-              <span id="summary_plan_title" class="block">Arcade</span> (<span id="summary_plan_duration">Monthly</span>)
-            </span>
-            <div class="summary_addons_item_container">
-              <span id="summary_button_change">Change</span>
-              <span id="summary_plan_pricing" class="block">$<span id="summary_plan_total">9</span>/<span
-                  class="summary_plan_dur">mo</span></span>
-            </div>
-          </div>
-    
-          <div id="summary_addons">
-            <div class="summary_addons_item_container">
-              <span class="summary_addons_item">Online Service</span>
-              <span class="summary_addons_item_pricing">+$<span class="summary_addons_amount">1</span>/<span
-                  class="summary_plan_dur">mo</span></span>
-            </div>
-            <div class="summary_addons_item_container">
-              <span class="summary_addons_item">Larger Storage</span>
-              <span class="summary_addons_item_pricing">+$<span class="summary_addons_amount">2</span>/<span
-                  class="summary_plan_dur">mo</span></span>
-            </div>
-          </div>
-    
-        </div>
-        <div id="summary_total" class="summary_container">
-          <span class="summary_total_desc">Total (per <span id="summary_total_duration">month</span>)</span>
-          <span class="block" id="summary_total_pricing">+$<span id="summary_total_amount">12</span>/<span
-              class="summary_plan_dur">mo</span></span>
-        </div>
-    
-      </div>
-    
-    
-      <!-- Step 4 end -->
-    
-      <!-- Step 5 start -->
-    
-      <div class="pages" id="page_thankyou">
-        <svg>
-          <use xlink:href="assets/images/icon-thank-you.svg#icon-thank-you" />
-        </svg>
-        <h2>Thank you!</h2>
-        <p>Thanks for confirming your subscription! <br />We hope you have fun
-          using our platform. If you ever need support, please feel free
-          to email us at support@loremgaming.com.</p>
-      </div>
-      <!-- Step 5 end -->
-    
-      <div id="buttons_container">
-        <button class="buttons" id="button_back">Go Back</button>
-        <button class="buttons" id="button_next">Next Step</button>
-      </div>
-    </main>
-    
-    
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://melissamyra.space" target="_blank">Melissa Myra</a>.
-    </div>
-
-  </div>
-  
-</body>
+  </body>
 </html>
