@@ -120,7 +120,8 @@ input[type="radio"] {
 }
 
 .block,
-.plans_container label {
+.plans_container label,
+form label {
     display: block;
 }
 
@@ -316,6 +317,27 @@ input[type="text"] {
     color: var(--title-text);
     font-weight: 500;
     font-size: 16px;
+}
+
+form label {
+    position: relative;
+    width: 100%;
+}
+
+form label.warning::after {
+    position: absolute;
+    display: block;
+    height: 20px;
+    content: "This field is required";
+    top: 0;
+    right: 0;
+    z-index: 100;
+    color: var(--warning);
+    font-weight: 700;
+}
+
+form label.warning input {
+    border: 1px solid var(--warning);
 }
 
 input[type="text"]:active,

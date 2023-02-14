@@ -20,6 +20,10 @@ const buttons_container = document.getElementById('buttons_container');
 const button_back = document.getElementById('button_back');
 const button_next = document.getElementById('button_next');
 
+// Contact Form
+const contact_form_labels = document.getElementsByClassName('contact_form_label');
+const contact_form_inputs = document.getElementsByClassName('contact_form_input');
+
 // Plans Toggling
 
 // -- Plans radio
@@ -36,6 +40,7 @@ const toggle_button = document.getElementById('toggle_button');
 const toggle_base = document.getElementById('toggle_base');
 
 // Addons
+const form = document.getElementById('form');
 const addons_checkboxes = document.getElementsByClassName('addons_checkbox');
 const addons_pricing = document.getElementsByClassName('addons_pricing');
 
@@ -194,8 +199,6 @@ pages_addons.addEventListener('click', (e) => {
         delete chosenPlan.addons[unchosen];
     }
 
-    console.log(chosenPlan.addons)
-
 });
 
 // ====================================================================
@@ -284,14 +287,32 @@ buttons_container.addEventListener('click', (e) => {
     if (e.target === button_next) {
         let nextPage;
 
-        for (let i = 0; i < pages_radio.length; i++) {
-            if (pages_radio[i].checked) {
-                nextPage = pages_radio[i+1];
+        if (contact_form_inputs[0].value !== '' && contact_form_inputs[1].value !== '' && contact_form_inputs[2].value !== '') {
+            
+            for (let i = 0; i < contact_form_inputs.length; i++) {
+                contact_form_labels[i].classList.remove('warning');
             }
-        }
 
-        if (nextPage !== pages_radio[pages_radio.length]) {
-            nextPage.checked = true;
+            for (let i = 0; i < pages_radio.length; i++) {
+                if (pages_radio[i].checked) {
+                    nextPage = pages_radio[i+1];
+                }
+            }
+
+            if (nextPage !== pages_radio[pages_radio.length]) {
+                nextPage.checked = true;
+            }
+
+        } else {
+
+            for (let i = 0; i < contact_form_inputs.length; i++) {
+                if (contact_form_inputs[i].value === '') {
+                    contact_form_labels[i].classList.add('warning');
+                } else {
+                    contact_form_labels[i].classList.remove('warning');
+                }
+            }
+
         }
     }
 
