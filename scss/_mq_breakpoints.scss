@@ -1,0 +1,126 @@
+@use './variables' as *;
+
+/* ============================ Mobile positions */
+
+.steps li,
+.addons label,
+.summary_addons_item_container,
+#summary_total {
+    position: relative;
+}
+
+.steps_num {
+    position: absolute;
+}
+
+
+/* ============================ Desktop Mode */
+@media (min-width: 1440px) {
+    body {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #body_wrapper {
+        padding: 15px;
+        background-color: $white;
+        height: 70vh;
+        width: 60vw;
+        border-radius: 10px;
+    }
+
+    body,
+    #body_wrapper,
+    .numbering label,
+    #page_thankyou.desktop {
+        display: flex;
+    }
+
+    /* page numbering */
+
+    .steps,
+    .numbering {
+        display: block;
+    }
+
+    .steps {
+        background-image: url('../assets/images/bg-sidebar-desktop.svg');
+        background-size: cover;
+        background-position: 0% 0%;
+        background-attachment: local;
+        width: 30%;
+        margin-right: 20px;
+        z-index: 1;
+        border-radius: 10px;
+        padding-left: 30px;
+    }
+
+    .numbering label {
+        align-items: center;
+    }
+
+    .numbering {
+        width: max-content;
+        height: max-content;
+        margin-bottom: 1.5em;
+    }
+
+    .steps_desc {
+        display: inline-block;
+    }
+
+    /* pages */
+
+    main {
+        margin: 0;
+        padding: 0 90px;
+        width: 70%;
+        position: relative;
+    }
+
+    .pages {
+        margin: 0 auto;
+        padding: 30px 0;
+    }
+
+    .pages>p {
+        margin-bottom: 2em;
+    }
+
+    /* page buttons */
+
+    #buttons_container {
+        position: absolute;
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+
+    /* Pages */
+
+    .plans_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 10px;
+    }
+
+    .plans_container label {
+        height: 180px;
+    }
+
+    .plans {
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #page_thankyou svg {
+        width: 65px;
+        height: 65px;
+        margin-bottom: 1.5em;
+    }
+
+    .attribution {
+        display: block;
+    }
+
+}

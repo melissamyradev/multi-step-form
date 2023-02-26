@@ -1,0 +1,619 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Ubuntu, sans-serif;
+  background-color: #f0f6ff;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+/* ===================================== */
+/* BASE  */
+.numbering {
+  pointer-events: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 16px;
+  color: #9699ab;
+  line-height: 1.5em;
+  margin: 10px 0 18px;
+}
+
+h2 {
+  margin: 0;
+}
+
+label,
+h2,
+.plans_label {
+  color: #02295a;
+  font-weight: 700;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+input[type=checkbox], input[type=radio] {
+  display: none;
+}
+
+.steps_num,
+.plans,
+.toggle_options,
+#toggle_base,
+#summary_button_change,
+.addons label,
+.buttons {
+  cursor: pointer;
+}
+
+#buttons_container {
+  background-color: white;
+  padding: 1.2em 20px;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+#button_back {
+  color: #9699ab;
+}
+#button_back:hover {
+  color: #02295a;
+}
+#button_next {
+  background: #02295a;
+  color: #d6d9e6;
+  margin-left: auto;
+}
+#button_next.confirm {
+  background: #473dff;
+}
+
+.buttons {
+  background: none;
+  border: none;
+  outline: none;
+  width: max-content;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 12px 15px;
+}
+
+.float_ver_center {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.block,
+.plans_container label,
+form label {
+  display: block;
+}
+
+.numbering,
+#toggle_button,
+.buttons,
+#summary_plan_title,
+#summary_plan_duration {
+  display: inline-block;
+}
+
+.flex,
+#buttons_container,
+.summary_plan_item_container,
+.summary_addons_item_container,
+#summary_total {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.center-items {
+  justify-content: center;
+}
+
+/* Main Page Indicators */
+.steps {
+  background-image: url("../assets/images/bg-sidebar-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-color: #f0f6ff;
+  background-attachment: fixed;
+  background-size: contain;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -100;
+  padding: 2em 0 6em;
+}
+.steps_num {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+}
+.steps_num_ind {
+  font-weight: 400;
+  font-size: 11px;
+  color: #9699ab;
+}
+.steps_num_container {
+  border: 1px solid white;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.steps_title {
+  letter-spacing: 0.5px;
+  margin-top: 1px;
+}
+.steps_desc {
+  display: none;
+  margin-left: 15px;
+}
+
+.numbering {
+  margin: 5px;
+  width: 34px;
+  height: 34px;
+}
+
+.steps_num_ind,
+.steps_title {
+  color: white;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+#page_1_radio:checked ~ .steps .numbering:nth-child(1) .steps_num_container {
+  background: #bfe2fd;
+  border-color: #bfe2fd;
+}
+#page_1_radio:checked ~ .steps #page_1 {
+  color: #02295a;
+  font-weight: 700;
+}
+#page_1_radio:checked ~ main .pages:nth-child(1) {
+  display: block;
+}
+#page_1_radio:checked ~ main #buttons_container #button_back {
+  display: none;
+}
+
+#page_2_radio:checked ~ .steps .numbering:nth-child(2) .steps_num_container {
+  background: #bfe2fd;
+  border-color: #bfe2fd;
+}
+#page_2_radio:checked ~ .steps #page_2 {
+  color: #02295a;
+  font-weight: 700;
+}
+#page_2_radio:checked ~ main .pages:nth-child(2) {
+  display: block;
+}
+
+#page_3_radio:checked ~ .steps .numbering:nth-child(3) .steps_num_container {
+  background: #bfe2fd;
+  border-color: #bfe2fd;
+}
+#page_3_radio:checked ~ .steps #page_3 {
+  color: #02295a;
+  font-weight: 700;
+}
+#page_3_radio:checked ~ main .pages:nth-child(3) {
+  display: block;
+}
+
+#page_4_radio:checked ~ .steps .numbering:nth-child(4) .steps_num_container {
+  background: #bfe2fd;
+  border-color: #bfe2fd;
+}
+#page_4_radio:checked ~ .steps #page_4 {
+  color: #02295a;
+  font-weight: 700;
+}
+#page_4_radio:checked ~ main .pages:nth-child(4) {
+  display: block;
+}
+#page_4_radio:checked ~ main .pages:nth-child(4) #buttons_container #text_next {
+  display: none;
+}
+
+main {
+  margin: -4.5em 20px 2em;
+  height: 100%;
+}
+main .pages {
+  padding: 30px 25px;
+  background-color: white;
+  border-radius: 10px;
+  display: none;
+  margin: 0;
+}
+
+input[type=text]:focus, input[type=text]:active {
+  outline: 1px solid #473dff;
+}
+
+input[type=text] {
+  margin-top: 2px;
+  margin-bottom: 1em;
+  min-height: 2.5em;
+  width: 100%;
+  border: 1px solid #d6d9e6;
+  border-radius: 3px;
+  padding: 12px 16px;
+  color: #02295a;
+  font-weight: 500;
+  font-size: 16px;
+}
+input[type=text]::placeholder {
+  color: #9699ab;
+}
+form label {
+  position: relative;
+  width: 100%;
+}
+form label.warning::after {
+  position: absolute;
+  display: block;
+  height: 20px;
+  content: "This field is required";
+  top: 0;
+  right: 0;
+  z-index: 100;
+  color: #ed3548;
+  font-weight: 700;
+}
+form label.warning input {
+  border: 1px solid #ed3548;
+}
+
+.addons, .plans {
+  padding: 15px 20px;
+  border: 1.5px solid #d6d9e6;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+}
+
+#summary_plan_title, #summary_plan_duration, #summary_plan_pricing, .addons_options, .plans_label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.summary_addons_item, #summary_button_change, #summary_total, .plans_monthly, .plans_yearly {
+  font-size: 14px;
+  color: #9699ab;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.plans_container {
+  margin: 20px auto;
+}
+.plans_container label:not(:last-child) {
+  margin-bottom: 13px;
+}
+.plans svg {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+.plans_yearly {
+  display: none;
+}
+.plans_yearly_promo {
+  font-size: 13px;
+  color: #02295a;
+  font-weight: 500;
+}
+
+.toggle_options {
+  font-weight: 500;
+  font-size: 15px;
+  color: #9699ab;
+}
+
+#plans_toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px;
+  background: #fafbff;
+}
+#plans_toggle #toggle_base {
+  background-color: #02295a;
+  width: 30px;
+  margin: 0 15px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  padding: 3.5px;
+}
+#plans_toggle #toggle_button {
+  background-color: white;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  transition: 0.2s ease;
+}
+
+.addons {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+.addons_desc {
+  color: #9699ab;
+  margin-top: 2px;
+  font-weight: 400;
+}
+.addons_pricing {
+  font-size: 13px;
+  color: #473dff;
+  font-weight: 500;
+  margin-left: 18px;
+}
+.addons_pseudo_checkbox {
+  border: 1px solid #d6d9e6;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s ease;
+  padding: 4px;
+  width: 22px;
+  height: 22px;
+  margin-right: 18px;
+}
+.addons_pseudo_checkbox svg {
+  width: 12px;
+  height: 12px;
+}
+.addons label {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+#summary_plan_title, .summary_addons_item {
+  text-transform: capitalize;
+}
+
+#summary_plan_pricing, .summary_addons_item_pricing {
+  font-size: 13px;
+}
+
+.summary_main {
+  background-color: #f0f6ff;
+  border-radius: 10px;
+}
+.summary_container {
+  padding: 25px 20px;
+}
+.summary_addons_item_container:not(:last-child) .summary_addons_item {
+  margin-bottom: 15px;
+}
+.summary_addons_item_container:first-child {
+  margin-top: 20px;
+}
+.summary_addons_item_pricing {
+  font-weight: 500;
+}
+
+#summary_plan {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d6d9e6;
+}
+#summary_button_change {
+  text-decoration: underline;
+}
+#summary_total_pricing {
+  font-weight: 700;
+  color: #473dff;
+}
+
+#page_thankyou {
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+}
+#page_thankyou svg {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1em;
+}
+
+input[name=plan]:checked + label .plans,
+.addons_container [type=checkbox]:checked + .addons {
+  border-color: #473dff;
+  background-color: #fafbff;
+}
+
+.addons_container [type=checkbox]:checked + .addons .addons_pseudo_checkbox {
+  background-color: #473dff;
+  border: none;
+}
+
+#toggle_monthly,
+#summary_plan_title,
+#summary_plan_duration,
+#summary_plan_pricing,
+.summary_addons_item_pricing {
+  color: #02295a;
+}
+
+#toggle_yearly_radio:checked ~ div .plans .plans_yearly {
+  display: block;
+}
+#toggle_yearly_radio:checked ~ div .plans .plans_monthly {
+  display: none;
+}
+#toggle_yearly_radio:checked ~ div #toggle_yearly {
+  color: #02295a;
+}
+#toggle_yearly_radio:checked ~ div #toggle_monthly {
+  color: #9699ab;
+}
+#toggle_yearly_radio:checked ~ div #toggle_button {
+  margin-left: 55%;
+}
+
+.attribution {
+  color: #9699ab;
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 10%;
+  left: 0;
+  width: 100vw;
+  display: none;
+}
+.attribution a {
+  color: #473dff;
+}
+
+/* ============================ Mobile positions */
+.steps li,
+.addons label,
+.summary_addons_item_container,
+#summary_total {
+  position: relative;
+}
+
+.steps_num {
+  position: absolute;
+}
+
+/* ============================ Desktop Mode */
+@media (min-width: 1440px) {
+  body {
+    justify-content: center;
+    align-items: center;
+  }
+
+  #body_wrapper {
+    padding: 15px;
+    background-color: white;
+    height: 70vh;
+    width: 60vw;
+    border-radius: 10px;
+  }
+
+  body,
+#body_wrapper,
+.numbering label,
+#page_thankyou.desktop {
+    display: flex;
+  }
+
+  /* page numbering */
+  .steps,
+.numbering {
+    display: block;
+  }
+
+  .steps {
+    background-image: url("../assets/images/bg-sidebar-desktop.svg");
+    background-size: cover;
+    background-position: 0% 0%;
+    background-attachment: local;
+    width: 30%;
+    margin-right: 20px;
+    z-index: 1;
+    border-radius: 10px;
+    padding-left: 30px;
+  }
+
+  .numbering label {
+    align-items: center;
+  }
+
+  .numbering {
+    width: max-content;
+    height: max-content;
+    margin-bottom: 1.5em;
+  }
+
+  .steps_desc {
+    display: inline-block;
+  }
+
+  /* pages */
+  main {
+    margin: 0;
+    padding: 0 90px;
+    width: 70%;
+    position: relative;
+  }
+
+  .pages {
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+
+  .pages > p {
+    margin-bottom: 2em;
+  }
+
+  /* page buttons */
+  #buttons_container {
+    position: absolute;
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  /* Pages */
+  .plans_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+  }
+
+  .plans_container label {
+    height: 180px;
+  }
+
+  .plans {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #page_thankyou svg {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 1.5em;
+  }
+
+  .attribution {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

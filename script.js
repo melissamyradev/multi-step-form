@@ -212,9 +212,10 @@ body.addEventListener('click', () => {
     // If at Summary Page, change button to Confirm
     if (page_4_radio.checked) {
         button_next.textContent = 'Confirm';
-        button_next.style.background = 'var(--accent)';
+        button_next.classList.add('confirm');
     } else {
         button_next.textContent = 'Next Step';
+        button_next.classList.remove('confirm');
     }
 
 });

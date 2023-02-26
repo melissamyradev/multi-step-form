@@ -1,0 +1,16 @@
+@use '../variables' as *;
+
+// PAGES BASE
+
+main {
+    margin: -4.5em 20px 2em;
+    height: 100%;
+
+    .pages {
+        padding: 30px 25px;
+        background-color: $white;
+        border-radius: 10px;
+        display: none;
+        margin: 0;
+    }
+}

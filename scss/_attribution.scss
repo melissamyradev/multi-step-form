@@ -1,0 +1,18 @@
+@use './variables' as *;
+
+// Attribution 
+
+.attribution {
+    color: $cool-gray;
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    bottom: 10%;
+    left: 0;
+    width: 100vw;
+    display: none;
+
+    a {
+        color: $accent;
+    }
+}

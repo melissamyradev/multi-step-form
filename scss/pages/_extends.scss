@@ -1,0 +1,21 @@
+@use '../variables' as *;
+
+%selection-container {
+    padding: 15px 20px;
+    border: 1.5px solid $light-gray;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+}
+
+%thick-font {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+%med-font {
+    font-size: 14px;
+    color: $cool-gray;
+    font-weight: 400;
+    margin-top: 5px;
+}

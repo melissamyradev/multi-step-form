@@ -1,0 +1,51 @@
+@use './variables' as *;
+
+// OPTIONS CLICKED TOGGLING
+
+input[name="plan"]:checked + label .plans,
+.addons_container [type="checkbox"]:checked + .addons {
+    border-color: $accent;
+    background-color: $alabaster;
+}
+
+.addons_container [type="checkbox"]:checked+.addons .addons_pseudo_checkbox {
+    background-color: $accent;
+    border: none;
+}
+
+#toggle_monthly,
+#summary_plan_title,
+#summary_plan_duration,
+#summary_plan_pricing,
+.summary_addons_item_pricing {
+    color: $title-text;
+}
+
+#toggle_yearly_radio:checked ~ {
+    div {
+
+        .plans {
+            .plans_yearly {
+                display: block;
+            }
+            .plans_monthly {
+                display: none;
+            }
+        }
+
+        #toggle {
+
+            &_yearly {
+                color: $title-text;
+            }
+
+            &_monthly {
+                color: $cool-gray;
+            }
+
+            &_button {
+                margin-left: 55%;
+            }
+        }
+    }
+}

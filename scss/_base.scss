@@ -1,0 +1,144 @@
+@use './variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Ubuntu, sans-serif;
+    background-color: $magnolia;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+/* ===================================== */
+
+/* BASE  */
+
+.numbering {
+    pointer-events: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 16px;
+    color: $cool-gray;
+    line-height: 1.5em;
+    margin: 10px 0 18px;
+}
+
+h2 {
+    margin: 0;
+}
+
+label,
+h2,
+.plans_label {
+    color: $title-text;
+    font-weight: 700;
+}
+
+label {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+input {
+
+    &[type="checkbox"],
+    &[type="radio"] {
+        display: none;
+    }
+}
+
+.steps_num,
+.plans,
+.toggle_options,
+#toggle_base,
+#summary_button_change,
+.addons label,
+.buttons {
+    cursor: pointer;
+}
+
+#button {
+
+    &s_container {
+        background-color: $white;
+        padding: 1.2em 20px;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    &_back {
+        color: $cool-gray;
+
+        &:hover {
+            color: $title-text;
+        }
+    }
+
+    &_next {
+        background: $title-text;
+        color: $light-gray;
+        margin-left: auto;
+        &.confirm {
+            background: $accent;
+        }
+    }
+
+}
+
+.buttons {
+    background: none;
+    border: none;
+    outline: none;
+    width: max-content;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 12px 15px;
+}
+
+.float_ver_center {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.block,
+.plans_container label,
+form label {
+    display: block;
+}
+
+.numbering,
+#toggle_button,
+.buttons,
+#summary_plan_title,
+#summary_plan_duration {
+    display: inline-block;
+}
+
+.flex,
+#buttons_container,
+.summary_plan_item_container,
+.summary_addons_item_container,
+#summary_total {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.center-items {
+    justify-content: center;
+}

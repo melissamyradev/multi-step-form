@@ -1,0 +1,87 @@
+@use '../variables' as *;
+@use 'extends';
+
+// PAGE 4 || SUMMARY
+
+%capitalize {
+    text-transform: capitalize;
+}
+
+%small-font {
+    font-size: 13px;
+}
+
+.summary {
+
+    &_main {
+        background-color: $magnolia;
+        border-radius: 10px;
+    }
+
+    &_container {
+        padding: 25px 20px;
+    }
+
+    &_addons {
+
+        &_item {
+            @extend %capitalize;
+            @extend %med-font;
+
+            &_container {
+                &:not(:last-child) {
+                    .summary_addons_item {
+                        margin-bottom: 15px;
+                    }
+                }
+        
+                &:first-child {
+                    margin-top: 20px;
+                }
+            }
+
+            &_pricing {
+                font-weight: 500;
+                @extend %small-font;
+            }
+        }
+        
+        
+    }
+}
+
+#summary {
+
+    &_plan {
+        padding-bottom: 15px;
+        border-bottom: 1px solid $light-gray;
+
+        &_title {
+            @extend %capitalize;
+            @extend %thick-font;
+        }
+
+        &_duration {
+            @extend %thick-font;
+        }
+
+        &_pricing {
+            @extend %small-font;
+            @extend %thick-font;
+        }
+    }
+
+    &_button_change {
+        text-decoration: underline;
+        @extend %med-font;
+    }
+
+    &_total {
+        @extend %med-font;
+
+        &_pricing {
+            font-weight: 700;
+            color: $accent;
+        }
+    }
+}
